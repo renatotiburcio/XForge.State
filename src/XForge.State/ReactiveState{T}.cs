@@ -62,6 +62,6 @@ internal static class PropertyChangedEventArgsCache
 
     internal sealed class PropertyChangedEventArgsCacheHolder
     {
-        internal readonly PropertyChangedEventArgs ValueChanged = new(nameof(IState<object>.Value));
+        internal readonly PropertyChangedEventArgs ValueChanged = new("Value");
     }
 }
