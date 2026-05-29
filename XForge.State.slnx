@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/XForge.State/XForge.State.csproj" />
+    <Project Path="src/XForge.State.Blazor/XForge.State.Blazor.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/XForge.State.Tests/XForge.State.Tests.csproj" />
+    <Project Path="tests/XForge.State.Blazor.Tests/XForge.State.Blazor.Tests.csproj" />
+  </Folder>
+</Solution>

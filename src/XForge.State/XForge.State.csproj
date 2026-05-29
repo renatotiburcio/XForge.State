@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <RootNamespace>XForge.State</RootNamespace>
+    <AssemblyName>XForge.State</AssemblyName>
+    <Description>Reactive state management for multi-component applications (Blazor, WPF, MAUI). Provides IState&lt;T&gt;, DerivedState, and StateStore with automatic change propagation.</Description>
+    <PackageTags>xforge;state;reactive;blazor;wpf;maui;state-management</PackageTags>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+
+</Project>

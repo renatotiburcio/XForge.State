@@ -1,0 +1,48 @@
+@namespace XForge.State.Blazor
+
+@*
+    StateView — A Blazor component that observes an IState<T> and re-renders
+    automatically when the state value changes.
+
+    Usage:
+        <StateView State="myState" Context="value">
+            <p>Current value: @value</p>
+        </StateView>
+*@
+
+@typeparam T
+@implements IDisposable
+
+@if (ChildContent is not null)
+{
+    @ChildContent(State!.Value)
+}
+
+@code {
+    /// <summary>
+    /// The reactive state to observe. Required.
+    /// </summary>
+    [Parameter, EditorRequired]
+    public IState<T> State { get; set; } = default!;
+
+    /// <summary>
+    /// The content to render, receiving the current state value as context.
+    /// </summary>
+    [Parameter]
+    public RenderFragment<T>? ChildContent { get; set; }
+
+    private IDisposable? _subscription;
+
+    /// <inheritdoc />
+    protected override void OnInitialized()
+    {
+        _subscription = State.Subscribe(_ => InvokeAsync(StateHasChanged));
+    }
+
+    /// <inheritdoc />
+    public void Dispose()
+    {
+        _subscription?.Dispose();
+        _subscription = null;
+    }
+}
