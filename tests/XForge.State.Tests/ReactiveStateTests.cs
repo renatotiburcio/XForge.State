@@ -58,7 +58,7 @@ public class ReactiveStateTests
 
         // Assert
         receivedArgs.Should().NotBeNull();
-        receivedArgs!.PropertyName.Should().Be(nameof(IState<object>.Value));
+        receivedArgs!.PropertyName.Should().Be("Value");
     }
 
     [Fact]
@@ -184,7 +184,8 @@ public class ReactiveStateTests
         // Arrange
         ReactiveState<int> state = new(0);
         int callCount = 0;
-        PropertyChangedEventHandler handler = (_, _) => callCount++;
+        void Handler(object? sender, PropertyChangedEventArgs e) => callCount++;
+        PropertyChangedEventHandler handler = Handler;
 
         // Act
         state.PropertyChanged += handler;
