@@ -1,9 +1,8 @@
-ï»¿# XForge.State
+# XForge.State
 
 Reactive state management for .NET: IState<T>, Subscribe, DerivedState, with Blazor support.
 
 [![NuGet Version](https://img.shields.io/nuget/v/XForge.State.svg?style=flat-square)](https://www.nuget.org/packages/XForge.State)
-[![CI](https://img.shields.io/github/actions/workflow/status/renatotiburcio/XForge.State/ci.yml?branch=main&style=flat-square&logo=github&label=CI)](https://github.com/renatotiburcio/XForge.State/actions/workflows/ci.yml)
 ![.NET](https://img.shields.io/badge/.NET-8.0%20%7C%209.0%20%7C%2010.0-512BD4?style=flat-square&logo=dotnet)
 [![MIT License](https://img.shields.io/github/license/renatotiburcio/=flat-square&color=blue)](LICENSE)
 
@@ -20,6 +19,12 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 ## Packages
 
 See [NuGet](https://www.nuget.org/packages/XForge.State) for all packages.
+
+## Documentation
+
+- **[Manual (pt-br)](manual/pt-br/README.md)** — Manual completo em português
+- **[Manual (en-us)](manual/en-us/README.md)** — Complete English manual
+- **[CHANGELOG.md](CHANGELOG.md)** — Release history
 
 ## Requirements
 
